@@ -1,5 +1,5 @@
 <?php
-
+namespace Cms\Core;
 class Request {
     public static function uri()
     {

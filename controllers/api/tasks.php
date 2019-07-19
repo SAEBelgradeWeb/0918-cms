@@ -1,4 +1,4 @@
 <?php
 
-$tasks = $app['db']->fetchAll("tasks");
+$tasks = App::get('db')->fetchAll("tasks");
 echo json_encode($tasks);

@@ -1,10 +1,15 @@
 <?php
-require "vendor/autoload.php";
-$app = [];
 
-$app['config'] = require "config.php";
+use Cms\Core\App;
+use Cms\Core\Database\Connection;
+use Cms\Core\Database\QueryBuilder;
+
+require "vendor/autoload.php";
+
+App::bind('config', require "config.php");
+
 require "core/functions.php";
 
-$app['db'] = new QueryBuilder(
-    Connection::make($app['config']['database'])
-);
+App::bind('db', new QueryBuilder(
+    Connection::make(App::get('config')['database'])
+));

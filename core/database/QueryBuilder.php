@@ -1,4 +1,6 @@
 <?php
+namespace Cms\Core\Database;
+
 class QueryBuilder {
 
     public $pdo;
@@ -11,7 +13,7 @@ class QueryBuilder {
     public function fetchAll($table) {
         $sql = $this->pdo->prepare("SELECT * FROM {$table}");
         $sql->execute();
-        return $sql->fetchAll(PDO::FETCH_OBJ);
+        return $sql->fetchAll(\PDO::FETCH_OBJ);
     }
 
     public function insert($table, $parameters)
