@@ -1,4 +1,4 @@
-#CMS created on class
+# CMS created on class
 
 Make sure to create new  database and import `0918tasks.sql`
 
@@ -21,12 +21,12 @@ npm run dev
 `
 npm run production
 `
-##Example
+## Example
 
 Take a look at `/about` page to see ***HelloWorld.vue*** component in place. This component also showcase usage of API and axios to fetch data. 
 
 All components should be placed in 
 `resources/assets/js/components` and registered in `resources/assets/js/app.js`
 
-##Notes
+## Notes
 Every time you add new class don't forget to do `composer dump-autoload`
