@@ -12,7 +12,7 @@ function dd($var) {
 
 function view($viewName, $data=[]) {
     extract($data);
-    require "views/{$viewName}.view.php";
+    require "../resources/views/{$viewName}.view.php";
 }
 
 function redirect($path) {
