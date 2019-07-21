@@ -1,29 +1,16 @@
-# public
-
-## Project setup
-```
+Once downloaded, run 
+```$xslt
 npm install
 ```
 
-### Compiles and hot-reloads for development
+To compile resources 
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+npm run watch
 ```
 
-### Run your tests
-```
-npm run test
-```
+Take a look at /about page to see HelloWorld.vue component in place.
 
-### Lints and fixes files
-```
-npm run lint
-```
+All components should be placed in 
+`resources/assets/js/components` and registered in `resources/assets/js/app.js`
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+ 
