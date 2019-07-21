@@ -14,4 +14,11 @@ class TasksController {
         return redirect('/');
     }
 
+    public function apiGet()
+    {
+        $tasks = App::get('db')->fetchAll("tasks");
+
+        echo json_encode($tasks);
+    }
+
 }
