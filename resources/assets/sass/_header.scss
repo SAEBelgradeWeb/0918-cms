@@ -2,12 +2,11 @@ nav {
   display: block;
   overflow: hidden;
 }
-
 nav ul {
   margin: 0;
   padding: 0;
-}
 
+}
 nav ul li {
   list-style-type: none;
   float: left;
@@ -24,6 +23,3 @@ nav ul li a {
 nav ul li a:hover {
   background-color: aqua;
 }
-
-/* use this file to import all others */
-

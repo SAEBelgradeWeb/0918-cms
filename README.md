@@ -2,6 +2,16 @@
 
 Make sure to create new  database and import `0918tasks.sql`
 
+To create and import database, you can use 
+
+```angular2html
+mysql -u root -p
+create database dbname;
+exit;
+
+mysql -u username -p database_name < 0918tasks.sql
+```
+
 Set your local database credentials in `config.php`
 
 Once downloaded, run 

@@ -7,36 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="/css/app.css">
-    <style>
-        nav {
-            display: block;
-            overflow: hidden;
-        }
-        nav ul {
-            margin: 0;
-            padding: 0;
 
-        }
-        nav ul li {
-            list-style-type: none;
-            float: left;
-            margin: 10px;
-        }
-
-        nav ul li a {
-            display: block;
-            padding: 4px;
-            background-color: gainsboro;
-            text-decoration: none;
-        }
-
-        nav ul li a:hover {
-            background-color: aqua;
-        }
-
-
-    </style>
 </head>
 <body>
-<?php require "nav.php" ?>
 <div id="app">
+    <?php require "nav.php" ?>
