@@ -16,6 +16,16 @@ class QueryBuilder {
         return $sql->fetchAll(\PDO::FETCH_OBJ);
     }
 
+    public function fetchOne($table, $parameters) {
+        $query = sprintf(
+            "SELECT * FROM %s WHERE id=:id",
+            $table //first %s
+        );
+        $sql = $this->pdo->prepare($query);
+        $sql->execute($parameters);
+        return $sql->fetchAll(\PDO::FETCH_OBJ);
+    }
+
     public function insert($table, $parameters)
     {
         $query = sprintf(
@@ -28,6 +38,42 @@ class QueryBuilder {
          * $query = INSERT INTO tasks (description, completed) VALUES(:description, :completed)
          */
 
+        $sql = $this->pdo->prepare($query);
+        $sql->execute($parameters);
+    }
+
+    public function update($table, $parameters)
+    {
+
+        $params = "";
+        foreach ($parameters as $key => $parameter) {
+            $params .= $key . "=:" . $key . ", ";
+        }
+
+
+        $query = sprintf(
+            "UPDATE %s SET %s WHERE id=:id",
+            $table, //first %s
+            trim($params, ", ")
+        );
+
+        $sql = $this->pdo->prepare($query);
+        $sql->execute($parameters);
+
+        /*
+         * $query = UPDATE tasks SET description=:description, completed=:completed WHERE id=:id;
+         */
+    }
+
+    public function delete($table, $parameters)
+    {
+        /*
+         * $query = DELETE FROM tasks WHERE id=:id;
+         */
+        $query = sprintf(
+            "DELETE FROM %s WHERE id=:id",
+            $table //first %s
+        );
         $sql = $this->pdo->prepare($query);
         $sql->execute($parameters);
     }
